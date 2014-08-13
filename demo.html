@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>adultAuth.js</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./jquery.adultAuth.js"></script>
+<script>
+$(function(){
+  $.adultAuth({
+    adultBtn: '#adult_btn', // require
+    adultContent: '#adult_content', // require
+    notAdultBtn: '#not_adult_btn', // require
+    notAdultContent: '#not_adult_content', // require
+    scrollSpeed: 200, // optional
+    scrollEasing: 'linear', // optional
+    scrollPadding: 0 // optional
+  });
+});
+</script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0 auto;
+  padding: 40px 30px;
+  height: 1200px;
+  width: 640px;
+}
+h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 24px;
+}
+ul {
+  overflow: hidden;
+}
+li {
+  float: left;
+  list-style: none;
+}
+.current {
+  opacity: 0.75;
+}
+</style>
+</head>
+<body>
+<h1>jquery.adultAuth.js</h1>
+<ul>
+  <li><a id="adult_btn"><img src="http://placehold.it/300x100&text=yes" alt=""></a></li>
+  <li><a id="not_adult_btn"><img src="http://placehold.it/300x100&text=no" alt=""></a></li>
+</ul>
+
+<div id="adult_content">
+  <img src="http://placehold.it/600x600&text=adult contents" alt="">
+</div>
+<div id="not_adult_content">
+  <img src="http://placehold.it/600x300&text=under 20" alt="">
+</div>
+</body>
+</html>
